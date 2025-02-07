@@ -9,11 +9,11 @@ function DefaultLayout() {
          <header>
             HEADER
          </header>
-
+         <hr />
          <main>
             <Outlet />
          </main>
-
+         <hr />
          <footer>
             FOOTER
          </footer>

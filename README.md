@@ -23,4 +23,4 @@ Setup Web App React
 
 ### Bonus:
 - Stampare le stelline del voto utilizzando un componente dedicato.
-- Gestire l'errore 404 in caso di libro non presente reindirizzando alla pagina 404.
+- Gestire l'errore 404 in caso di film non presente reindirizzando alla pagina 404.

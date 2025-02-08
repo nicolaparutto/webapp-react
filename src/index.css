@@ -26,6 +26,25 @@ img {
   border: 1px dashed red;
 }
 
+.d-block {
+  display: block;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #0E6EFD;
+  color: #fff;
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
 /* HomePage style */
 .movies-list {
   border: 1px solid #000;
@@ -37,7 +56,7 @@ img {
   width: calc(100% / 3);
   padding: 10px;
 
-  .movie-content {
+  .movies-content {
     border: 1px solid #000;
 
     .card-img {
@@ -46,6 +65,43 @@ img {
 
     .card-text {
       padding: 10px;
+
+      h2 {
+        margin-bottom: 15px;
+      }
     }
+  }
+}
+
+/* MovieDetailPage style */
+.movie-detail {
+  .btn {
+    margin: 30px 0;
+  }
+}
+
+
+.movie-content {
+  border: 1px solid #000;
+  display: flex;
+  margin-top: 50px;
+
+  .movie-img {
+    width: 300px;
+  }
+
+  .movie-text {
+    padding: 20px;
+  }
+}
+
+.movie-reviews {
+  border: 1px solid #000;
+  padding: 20px;
+
+  .review-container {
+    border: 1px solid #000;
+    margin: 10px 0;
+    padding: 10px;
   }
 }

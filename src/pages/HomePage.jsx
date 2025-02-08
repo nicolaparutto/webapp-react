@@ -1,11 +1,11 @@
 import { useEffect } from "react"
 import { useGlobalDataContext } from "../context/globalContext";
-
+import { Link } from "react-router-dom";
 
 
 function HomePage() {
 
-   const { fetchMovies, movieData } = useGlobalDataContext();
+   const { fetchMovies, moviesData } = useGlobalDataContext();
 
    useEffect(() => {
       fetchMovies()
@@ -15,15 +15,15 @@ function HomePage() {
       <section className="container">
          <h1>Lista dei film</h1>
          <div className="movies-list">
-            {movieData.map(movie => (
+            {moviesData.map(movie => (
                <div key={movie.id} className="movie-card">
-                  <div className="movie-content">
+                  <div className="movies-content">
                      <div className="card-img">
                         <img src={movie.image} alt="" />
                      </div>
                      <div className="card-text">
                         <h2>{movie.title}</h2>
-
+                        <Link to={`/movie-detail/${movie.id}`} className="btn">Vedi Dettagli</Link>
                      </div>
                   </div>
                </div>

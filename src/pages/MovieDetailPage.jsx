@@ -2,6 +2,8 @@ import { useGlobalDataContext } from "../context/globalContext";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import StarsRating from "../components/StarsRating";
+
 function MovieDetailPage() {
 
    const { id } = useParams();
@@ -36,7 +38,7 @@ function MovieDetailPage() {
                   {movie.reviews.map(review => (
                      <div key={review.id} className="review-container">
                         <p>Scritto da: {review.name}</p>
-                        <span>Voto: {review.vote}/5</span>
+                        <StarsRating vote={review.vote} />
                         <p>{review.text}</p>
                      </div>
                   ))}

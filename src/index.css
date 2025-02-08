@@ -16,6 +16,10 @@ img {
   overflow: hidden;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* utility */
 .container {
   margin: 0 auto;
@@ -41,10 +45,12 @@ img {
   border-radius: 10px;
 }
 
-a {
-  text-decoration: none;
+.yellow-star{
+  color: yellow;
 }
-
+.grey-star{
+  color: grey;
+}
 /* HomePage style */
 .movies-list {
   border: 1px solid #000;

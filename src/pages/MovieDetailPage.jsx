@@ -31,7 +31,7 @@ function MovieDetailPage() {
 
                </div>
 
-               <Link to='/' className="btn d-block text-center">Torna alla Lista</Link>
+               <Link to='/home' className="btn d-block text-center">Torna alla Lista</Link>
 
                <div className="movie-reviews">
                   <h3>Recensioni</h3>

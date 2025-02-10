@@ -42,7 +42,7 @@ function MovieDetailPage() {
                         <p>{review.text}</p>
                      </div>
                   ))}
-                  <button className="btn d-block w-100"><Link to="/new-review">Aggiungi una recensione</Link></button>
+                  <button className="btn d-block"><Link to="/new-review">Aggiungi una recensione</Link></button>
                </div>
             </div>
          ))}

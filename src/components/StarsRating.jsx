@@ -4,12 +4,12 @@ function StarsRating(props) {
    let stars = [];
 
    for (let i = 0; i < 5; i++) {
-      stars.push(<i className={`fa-solid fa-star ${i < vote ? 'yellow' : 'grey'}-star`}></i>)
+      stars.push(<i key={i} className={`fa-solid fa-star ${i < vote ? 'yellow' : 'grey'}-star`}></i>)
    }
 
    return (
       <>
-         <div>{stars}</div >
+         <div>{stars}</div>
       </>
    )
 }

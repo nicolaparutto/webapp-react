@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import StarsRating from "../components/StarsRating";
+import NewReviewForm from "../components/NewReviewForm";
 
 function MovieDetailPage() {
 
@@ -42,13 +43,15 @@ function MovieDetailPage() {
                         <p>{review.text}</p>
                      </div>
                   ))}
-                  <button className="btn d-block"><Link to="/new-review">Aggiungi una recensione</Link></button>
                </div>
             </div>
          ))}
 
 
-
+         <div className="new-review-container">
+            <h1>Aggiungi una recensione</h1>
+            <NewReviewForm />
+         </div>
 
       </section>
    )

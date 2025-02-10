@@ -5,20 +5,20 @@ const GlobalDataContext = createContext();
 
 const GlobalProvider = ({ children }) => {
 
-   const defaultApiUrl = 'http://localhost:3000';
+   const defaultApiUrl = 'http://localhost:3000/api/movies';
 
    const [moviesData, setMoviesData] = useState([]);
    const [movieData, setMovieData] = useState([]);
 
    const fetchMovies = () => {
-      axios.get(`${defaultApiUrl}/api/movies`)
+      axios.get(defaultApiUrl)
          .then(res => {
             setMoviesData(res.data)
          })
    }
 
    const fetchMovie = (id) => {
-      axios.get(`${defaultApiUrl}/api/movies/${id}`)
+      axios.get(`${defaultApiUrl}/${id}`)
          .then(res => {
             setMovieData(res.data)
          })

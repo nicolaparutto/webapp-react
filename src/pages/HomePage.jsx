@@ -23,7 +23,7 @@ function HomePage() {
                      </div>
                      <div className="card-text">
                         <h2>{movie.title}</h2>
-                        <Link to={`/movie-detail/${movie.id}`} className="btn">Vedi Dettagli</Link>
+                        <button className="btn"><Link to={`/movie-detail/${movie.id}`}>Vedi Dettagli</Link></button>
                      </div>
                   </div>
                </div>

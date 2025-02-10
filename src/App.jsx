@@ -5,6 +5,8 @@ import DefaultLayout from "./layouts/DefaultLayout";
 //pages:
 import HomePage from "./pages/HomePage";
 import MovieDetailPage from "./pages/MovieDetailPage";
+import NewReviewPage from "./pages/newReviewPage";
+
 //global provider import:
 import { GlobalProvider } from "./context/globalContext";
 
@@ -15,8 +17,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route Component={DefaultLayout}>
-            <Route path="/" Component={HomePage} />
+            <Route path="/home" Component={HomePage} />
             <Route path="/movie-detail/:id" Component={MovieDetailPage} />
+            <Route path="/new-review" Component={NewReviewPage} />
           </Route>
         </Routes>
       </BrowserRouter>

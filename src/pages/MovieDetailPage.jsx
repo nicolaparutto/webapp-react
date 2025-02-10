@@ -11,7 +11,7 @@ function MovieDetailPage() {
    const { movieData, fetchMovie } = useGlobalDataContext();
 
    useEffect(() => {
-      fetchMovie(id)
+      fetchMovie(id);
    }, [])
 
    return (
@@ -42,6 +42,7 @@ function MovieDetailPage() {
                         <p>{review.text}</p>
                      </div>
                   ))}
+                  <button className="btn d-block w-100"><Link to="/new-review">Aggiungi una recensione</Link></button>
                </div>
             </div>
          ))}

@@ -17,6 +17,7 @@ img {
 }
 
 a {
+  color: #fff;
   text-decoration: none;
 }
 
@@ -38,19 +39,26 @@ a {
   text-align: center;
 }
 
+.w-100 {
+  width: 100%;
+}
+
 .btn {
+  border: none;
   padding: 10px 20px;
   background-color: #0E6EFD;
   color: #fff;
   border-radius: 10px;
 }
 
-.yellow-star{
+.yellow-star {
   color: yellow;
 }
-.grey-star{
+
+.grey-star {
   color: grey;
 }
+
 /* HomePage style */
 .movies-list {
   border: 1px solid #000;

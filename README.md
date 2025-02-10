@@ -19,8 +19,16 @@ Setup Web App React
 ### Milestone 4:
 - In ultimo, effettuare una chiamata Ajax dalla pagina di dettaglio per ottenere il dettaglio di un singolo film, compreso di recensioni.
 
-<hr>
-
 ### Bonus:
 - Stampare le stelline del voto utilizzando un componente dedicato.
 - Gestire l'errore 404 in caso di film non presente reindirizzando alla pagina 404.
+
+<hr>
+
+## Consegna 2:
+Continuare a lavorare sul progetto full-stack (repository: webapp-react | webapp-express).
+
+- Aggiungere la chiamata all'API che gestisca l'aggiunta di una nuova recensione e, a lato front-end, nella pagina di dettaglio di un film, inserire un form che invia in POST la nuova recensione.
+
+### Bonus:
+- Gestire la validazione del form prima dell'invio con eventuale messaggio di errore.

@@ -10,7 +10,6 @@ function MovieDetailPage() {
    const { id } = useParams();
 
    const { movieData, fetchMovie } = useGlobalDataContext();
-
    useEffect(() => {
       fetchMovie(id);
    }, [])
@@ -44,15 +43,13 @@ function MovieDetailPage() {
                      </div>
                   ))}
                </div>
+
+               <div className="new-review-container">
+                  <h1>Aggiungi una recensione</h1>
+                  <NewReviewForm movie_id={movie.id} reloadPage={fetchMovie} />
+               </div>
             </div>
          ))}
-
-
-         <div className="new-review-container">
-            <h1>Aggiungi una recensione</h1>
-            <NewReviewForm />
-         </div>
-
       </section>
    )
 }

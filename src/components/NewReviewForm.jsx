@@ -1,7 +1,10 @@
 import { useState } from "react";
 import axios from "axios";
 
-function NewReviewForm() {
+function NewReviewForm(props) {
+
+   const movieId = props.movie_id;
+   const reloadPage = props.reloadPage
 
    const initialFormData = {
       name: '',
@@ -21,7 +24,11 @@ function NewReviewForm() {
    const defaultApiUrl = 'http://localhost:3000/api/movies';
    const handlerSubmit = (e) => {
       e.preventDefault();
-
+      axios.post(`${defaultApiUrl}/${movieId}/reviews`, formData, { headers: { 'Content-Type': 'application/json' } })
+         .then(res => {
+            setFormData(initialFormData);
+            reloadPage(movieId)
+         })
    }
 
    return (

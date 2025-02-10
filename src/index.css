@@ -55,6 +55,10 @@ a {
   color: grey;
 }
 
+.err-message {
+  color: red;
+}
+
 /* HomePage style */
 .movies-list {
   border: 1px solid #000;

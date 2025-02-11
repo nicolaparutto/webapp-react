@@ -18,7 +18,6 @@ function NewReviewForm(props) {
          ...prev,
          [name]: value
       })))
-
    }
 
    //Validazione dei dati del form:

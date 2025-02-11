@@ -17,7 +17,7 @@ img {
 }
 
 a {
-  color: #fff;
+  color: #000;
   text-decoration: none;
 }
 
@@ -29,6 +29,10 @@ a {
 
 .debug {
   border: 1px dashed red;
+}
+
+.active {
+  color: #0E6EFD;
 }
 
 .d-block {
@@ -45,6 +49,10 @@ a {
   background-color: #0E6EFD;
   color: #fff;
   border-radius: 10px;
+
+  a {
+    color: #fff;
+  }
 }
 
 .yellow-star {
@@ -57,6 +65,34 @@ a {
 
 .err-message {
   color: red;
+}
+
+/*NavBar style*/
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+
+  .nav-left {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      margin-right: 50px;
+      font-size: 1.5rem;
+    }
+
+    nav {
+      ul {
+        display: flex;
+        list-style: none;
+
+        li {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
 }
 
 /* HomePage style */

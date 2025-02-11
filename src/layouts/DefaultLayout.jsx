@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-
+import NavBar from "../components/NavBar";
 
 
 function DefaultLayout() {
@@ -7,7 +7,7 @@ function DefaultLayout() {
    return (
       <>
          <header>
-            HEADER
+            <NavBar />
          </header>
          <hr />
          <main>

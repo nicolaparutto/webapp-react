@@ -14,16 +14,26 @@ function AddMoviePage() {
    const [newMovieData, setNewMovieData] = useState(initialMovieData);
    const changeInputValue = (e) => {
       const { name, value } = e.target;
-      setNewMovieData(prev => ({
-         ...prev,
-         [name]: value
-      }))
-      console.log(newMovieData)
+
+      if (name === 'image') {
+         setNewMovieData(prev => ({
+            ...prev,
+            image: e.target.files[0]
+         }))
+      } else {
+         setNewMovieData(prev => ({
+            ...prev,
+            [name]: value,
+         }))
+      }
    }
 
    const handlerSubmit = (e) => {
       e.preventDefault();
-      console.log('film inviato')
+      const dataToSend = new FormData();
+      for (let key in newMovieData) {
+         dataToSend.append(key, newMovieData[key]);
+      }
    }
 
    return (

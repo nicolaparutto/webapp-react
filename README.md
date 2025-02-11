@@ -32,3 +32,23 @@ Continuare a lavorare sul progetto full-stack (repository: webapp-react | webapp
 
 ### Bonus:
 - Gestire la validazione del form prima dell'invio con eventuale messaggio di errore.
+
+<hr>
+
+## Consegna 3:
+A partire dal lavoro individuale di stamattina inserire un form per l'aggiunta di un nuovo film, facendo in modo che venga tutto salvato nel DataBase.
+
+- Lato backend:
+  - Installare multer ('npm i multer').
+  - Aggiungere il middleware allegato, prestando attenzione al percorso assegnato.
+  - Nel router importarlo 'iniettandolo' nella rotta store dei nuovi film.
+  - Nel cotroller gestire i dati in ingresso delle req e il nome del file con 'req.file.filename'.
+
+- Lato frontend:
+  - Creare la nuova rotta per il form di creazione.
+  - Creare il componente della nuova pagina che contiene il form.
+  - Il campo input che si occupa dell'immagine deve essere di tipo 'file' e non necessita di un 'value'.
+  - l'handler che gestisce il form data alla chiave 'image' dovrà associare il valore e.target.file[0].
+  - Per l’invio del form creare un’istanza FormData (const dataToSend = new FormData();).
+  - A questa istanza, ciclando con un for/in il nostro fromData faremo l’append delle chiavi/valore del nostro form.
+  - L’headers della chiamata axios deve essere 'Content-Type': 'multipart/form-data'.

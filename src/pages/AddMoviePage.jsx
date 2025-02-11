@@ -1,4 +1,6 @@
 import { useState } from "react";
+import axios from "axios";
+import { data, Navigate } from "react-router-dom";
 
 function AddMoviePage() {
 
@@ -34,6 +36,10 @@ function AddMoviePage() {
       for (let key in newMovieData) {
          dataToSend.append(key, newMovieData[key]);
       }
+
+      const defaultApiUrl = 'http://localhost:3000/api/movies';
+      axios.post(defaultApiUrl, dataToSend, { headers: { 'Content-Type': 'multipart/form-data' } })
+         .then(() => Navigate('/home'))
    }
 
    return (

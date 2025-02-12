@@ -10,6 +10,11 @@ function MovieDetailPage() {
    const { id } = useParams();
 
    const { movieData, fetchMovie } = useGlobalDataContext();
+
+   const deleteMovieData = (id) => {
+      console.log('Film elliminato')
+   }
+
    useEffect(() => {
       fetchMovie(id);
    }, [])
@@ -28,7 +33,13 @@ function MovieDetailPage() {
                      <p>Anno di rilascio: {movie.release_year}</p>
                      <p>{movie.abstract}</p>
                   </div>
-
+                  <div className="delete-btn-container">
+                     <button className="btn-red" onClick={() => {
+                        if (confirm('Elliminare definitivamente il film?'))
+                           deleteMovieData(movie.id)
+                     }}
+                     >Ellimina</button>
+                  </div>
                </div>
 
                <Link to='/home' className="btn d-block text-center">Torna alla Lista</Link>
@@ -49,8 +60,9 @@ function MovieDetailPage() {
                   <NewReviewForm movie_id={movie.id} reloadPage={fetchMovie} />
                </div>
             </div>
-         ))}
-      </section>
+         ))
+         }
+      </section >
    )
 }
 

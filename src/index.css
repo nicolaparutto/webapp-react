@@ -45,13 +45,25 @@ a {
 
 .btn {
   border: none;
-  padding: 10px 20px;
   background-color: #0E6EFD;
   color: #fff;
   border-radius: 10px;
+  padding: 10px 20px;
 
   a {
     color: #fff;
+  }
+}
+
+.btn-red {
+  border: none;
+  background-color: red;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: rgb(203, 0, 0);
   }
 }
 
@@ -135,6 +147,7 @@ a {
   border: 1px solid #000;
   display: flex;
   margin-top: 50px;
+  position: relative;
 
   .movie-img {
     width: 300px;
@@ -142,6 +155,12 @@ a {
 
   .movie-text {
     padding: 20px;
+  }
+
+  .delete-btn-container {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
   }
 }
 

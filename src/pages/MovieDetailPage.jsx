@@ -9,9 +9,9 @@ function MovieDetailPage() {
 
    const { id } = useParams();
 
-   const { movieData, fetchMovie } = useGlobalDataContext();
+   const { movieData, fetchMovie, deleteMovieData } = useGlobalDataContext();
 
-   const deleteMovieData = (id) => {
+   const deleteMovie = (id) => {
       console.log('Film elliminato')
    }
 

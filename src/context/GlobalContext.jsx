@@ -24,12 +24,9 @@ const GlobalProvider = ({ children }) => {
          })
    }
 
-   const deleteMovieData = (id) => {
-      console.log('Film elliminato');
-   }
 
    return (
-      <GlobalDataContext.Provider value={{ fetchMovies, moviesData, fetchMovie, movieData, deleteMovieData }}>
+      <GlobalDataContext.Provider value={{ fetchMovies, moviesData, fetchMovie, movieData }}>
          {children}
       </GlobalDataContext.Provider>
    )

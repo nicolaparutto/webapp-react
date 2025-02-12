@@ -1,18 +1,24 @@
 import { useGlobalDataContext } from "../context/globalContext";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import StarsRating from "../components/StarsRating";
 import NewReviewForm from "../components/NewReviewForm";
+import axios from "axios";
 
 function MovieDetailPage() {
 
    const { id } = useParams();
 
-   const { movieData, fetchMovie, deleteMovieData } = useGlobalDataContext();
+   const { movieData, fetchMovie, } = useGlobalDataContext();
 
-   const deleteMovie = (id) => {
-      console.log('Film elliminato')
+   const navigate = useNavigate();
+   const defaultApiUrl = 'http://localhost:3000/api/movies';
+   const deleteMovieData = (id) => {
+      axios.delete(`${defaultApiUrl}/${id}`)
+         .then(res => {
+            navigate('/home')
+         })
    }
 
    useEffect(() => {
